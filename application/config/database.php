@@ -54,10 +54,6 @@ $active_record = TRUE;
 //$db['default']['username'] = 'root';
 
 //Server
-//$db['default']['hostname'] = 'ymedialabs.db.11483340.hostedresource.com';
-//$db['default']['username'] = 'ymedialabs';
-//$db['default']['password'] = 'Ymedialabs12#';
-//Server
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'hack';
 $db['default']['password'] = 'ahabbuka24';
