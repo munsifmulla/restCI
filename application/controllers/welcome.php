@@ -202,8 +202,8 @@ class Welcome extends CI_Controller {
         $base_cUrl = "https://api.springrole.com/beta/";
 //        $url = $base_cUrl."jobs?access_token=".$this->session->userdata("accessToken")."&user_id=".$this->session->userdata("userId");
 
-        $url = "http://localhost.home.com/CIServer/swipIn/users";
-//        $url = "http://fdrive.in/ci/swipIn/users";
+//        $url = "http://localhost.home.com/CIServer/swipIn/users";
+        $url = "http://54.173.63.70/restCI/index.php/swipIn/users";
         // Initialize session and set URL.
         $data = json_encode(
             array("cat_one"=>"Tiger","cat_two"=>"Adult Lion")
