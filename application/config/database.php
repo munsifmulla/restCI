@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 //Local
-$db['default']['hostname'] = 'localhost';
-$db['default']['password'] = '';
-$db['default']['username'] = 'root';
+//$db['default']['hostname'] = 'localhost';
+//$db['default']['password'] = '';
+//$db['default']['username'] = 'root';
 
 //Server
 //$db['default']['hostname'] = 'ymedialabs.db.11483340.hostedresource.com';
