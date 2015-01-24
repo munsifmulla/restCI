@@ -57,8 +57,12 @@ $db['default']['username'] = 'root';
 //$db['default']['hostname'] = 'ymedialabs.db.11483340.hostedresource.com';
 //$db['default']['username'] = 'ymedialabs';
 //$db['default']['password'] = 'Ymedialabs12#';
+//Server
+$db['default']['hostname'] = 'hack.cgugdamuqfs7.us-east-1.rds.amazonaws.com:3306';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'root';
 
-$db['default']['database'] = 'ymedialabs';
+$db['default']['database'] = 'hackathon';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
