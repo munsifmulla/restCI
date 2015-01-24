@@ -140,9 +140,9 @@ class SwipIn extends REST_Controller{
                 }
                 return $out;
             }
-            $headers = apache_request_headers();
+
         }
-        print_r($headers);
+        $headers = apache_request_headers();
 
         if(!isset($headers['access_token'])){
             $response = array("code"=>"400","message"=>"Access token is required");
