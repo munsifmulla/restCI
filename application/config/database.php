@@ -58,7 +58,7 @@ $db['default']['username'] = 'root';
 //$db['default']['username'] = 'ymedialabs';
 //$db['default']['password'] = 'Ymedialabs12#';
 //Server
-$db['default']['hostname'] = 'hack.cgugdamuqfs7.us-east-1.rds.amazonaws.com:3306';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'root';
 
