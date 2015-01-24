@@ -198,8 +198,8 @@ class Welcome extends CI_Controller {
     }
     public function testHeaders(){
 
-        $url = "http://localhost.home.com/restCI/swipIn/getallImages";
-        //$url = "http://54.173.63.70/restCI/index.php/swipIn/getImages";
+//        $url = "http://localhost.home.com/restCI/swipIn/getImages";
+        $url = "http://54.173.63.70/restCI/index.php/swipIn/getImages";
 
         // Initialize session and set URL.
         $data = json_encode(
