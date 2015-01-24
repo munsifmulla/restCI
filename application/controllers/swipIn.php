@@ -121,7 +121,7 @@ class SwipIn extends REST_Controller{
     }
 
     //Function to get Images from Google
-    public function getImages_post(){
+    public function getallImages_post(){
         $startOne = 1;$startTwo = 1;
         $responsArrayOne= array();
         $responsArrayTwo= array();
@@ -143,9 +143,10 @@ class SwipIn extends REST_Controller{
 
         }
         $headers = apache_request_headers();
+//        print_r($headers);
 
         if(!isset($headers['access_token'])){
-            $response = array("code"=>"400","message"=>"Access token is required");
+            $response = array("code"=>"400","message"=>"Access token is required");//Cleared
             $this->response($response);
         }
         else {
@@ -153,7 +154,7 @@ class SwipIn extends REST_Controller{
             $find_token = $this->db->get_where("token",array("token"=>$headers['access_token']));
             if($find_token->num_rows == 1){
                 if ($this->post("cat_one") == NULL || $this->post("cat_two") == NULL) {
-                    $this->response(array("code" => "300", "message" => "Category is required"));
+                    $this->response(array("code" => "300", "message" => "Category is required"));//Cleared
                 }
                 else {
                     //Getting Category One Images
@@ -168,7 +169,6 @@ class SwipIn extends REST_Controller{
 
                         $response = curl_exec($ch);
                         $newres = json_decode($response, true);
-//        echo $response;
 
                         if (sizeof($newres['responseData']['results']) > 1) {
                             foreach ($newres['responseData']['results'] as $item) {
@@ -220,25 +220,17 @@ class SwipIn extends REST_Controller{
                         }
                         curl_close($ch);
                     }
-//        Displaying Images
                     if ($flag == true) {
-//            echo "One";
-//            foreach($responsArrayOne as $item){
-//                echo "<img src = '".$item."' width = '80px'/> <hr/>";
-//            }
-//            echo "Two";
                         $newRes = array_merge($responsArrayOne, $responsArrayTwo);
                         shuffle($newRes);
                         $this->response(array("code" => "200", "message" => $newRes));
-//            foreach($newRes as $item){
-//                echo "<img src = '".$item."' width = '80px'/> <hr/>";
-//            }
+                    }
+                    else{
+                        $this->response(array("code" => "200", "message" => "Some Error"));
                     }
                 }
             }
             else{
-                $response = json_encode(array("code"=>"401","message"=>"Invalid access token"));
-//                echo ($response);
                 $this->response(array("code"=>"401","message"=>"Invalid access token"), 200);
             }
         }

@@ -49,16 +49,16 @@ $active_group = 'default';
 $active_record = TRUE;
 
 //Local
-//$db['default']['hostname'] = 'localhost';
-//$db['default']['password'] = '';
-//$db['default']['username'] = 'root';
-
-//Server
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'hack';
-$db['default']['password'] = 'ahabbuka24';
+$db['default']['password'] = '';
+$db['default']['username'] = 'root';
+$db['default']['database'] = 'ymedialabs';
+//Server
+//$db['default']['hostname'] = 'localhost';
+//$db['default']['username'] = 'hack';
+//$db['default']['password'] = 'ahabbuka24';
+//$db['default']['database'] = 'hackathon';
 
-$db['default']['database'] = 'hackathon';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
