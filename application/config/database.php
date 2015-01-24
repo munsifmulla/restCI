@@ -59,7 +59,7 @@ $active_record = TRUE;
 //$db['default']['password'] = 'Ymedialabs12#';
 //Server
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'munsif';
+$db['default']['username'] = 'hack';
 $db['default']['password'] = 'ahabbuka24';
 
 $db['default']['database'] = 'hackathon';
