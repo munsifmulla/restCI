@@ -121,7 +121,7 @@ class SwipIn extends REST_Controller{
     }
 
     //Function to get Images from Google
-    public function getallImages_post(){
+    public function getImages_post(){
         $startOne = 1;$startTwo = 1;
         $responsArrayOne= array();
         $responsArrayTwo= array();
